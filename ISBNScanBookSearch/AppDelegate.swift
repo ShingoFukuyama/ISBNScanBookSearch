@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  ISBNScanBookSearch
 //
-//  Created by Shingo Fukuyama on 2018/05/12.
-//  Copyright © 2018 Shingo Fukuyama. All rights reserved.
-//
 
 import UIKit
 
@@ -15,7 +12,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = self.window {
+            let viewController = ViewController()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window.rootViewController = navigationController
+            window.backgroundColor = UIColor.white
+            window.makeKeyAndVisible()
+        }
+
         return true
     }
 

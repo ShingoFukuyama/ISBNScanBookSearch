@@ -2,9 +2,6 @@
 //  ViewController.swift
 //  ISBNScanBookSearch
 //
-//  Created by Shingo Fukuyama on 2018/05/12.
-//  Copyright © 2018 Shingo Fukuyama. All rights reserved.
-//
 
 import UIKit
 
@@ -12,7 +9,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+
+        ScanBookViewController.start(on: self)
     }
 
     override func didReceiveMemoryWarning() {
